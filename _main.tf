@@ -35,5 +35,9 @@ variable "webserver_port" {
     default     = 8080
 }
 
+output "public_ip" {
+    value       = aws_instance.webserver.public_ip
+    description = "The public IP of the web server" 
+}
 # amazon linux ami-090fa75af13c156b4
 # ubuntu 20.04 ami-08d4ac5b634553e16
